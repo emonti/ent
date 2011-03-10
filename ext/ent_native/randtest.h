@@ -1,7 +1,7 @@
 
 /*  Random test function prototypes  */
 
-typedef struct rt_ctx;
+typedef struct _rt_ctx rt_ctx;
 
 extern void rt_init();
 
