@@ -23,6 +23,11 @@ Jeweler::RubygemsDotOrgTasks.new
 Rake::ExtensionTask.new("ent_native")
 
 CLEAN.include("lib/*.bundle")
+CLEAN.include("ext/ent_native/*.bundle")
+CLEAN.include("ext/ent_native/*.o")
+CLEAN.include("ext/ent_native/Makefile")
+CLEAN.include("ext/ent_native/mkmf.log")
+CLEAN.include("ext/ent_native/extconf.h")
 CLEAN.include("lib/*.so")
 CLEAN.include("tmp/")
 CLEAN.include("doc/")
