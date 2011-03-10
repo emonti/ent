@@ -23,7 +23,7 @@
 
 
 typedef struct {
-  int    binary;              /* use binary mode ? */
+  int    binary;              /* use byte(0) or binary(1) mode ? */
   int    sccfirst;            /* first time for serial correlation ? */
   size_t totalc;              /* Total bytes counted */
   int    mp;                  /* Monte Carlo accumulator pointer */
@@ -57,7 +57,7 @@ void rt_init() {
 }
 
 /*  RT_INIT  --  Initialise random test counters.  */
-rt_ctx * rt_new(int binmode)
+rt_ctx * rt_new()
 {
     rt_ctx * ctx;
 
@@ -65,7 +65,6 @@ rt_ctx * rt_new(int binmode)
       bzero(ctx, sizeof(rt_ctx));
 
       /* Initialise for calculations */
-      ctx->binary = binmode;         /* Set binary / byte mode */
       ctx->sccfirst = TRUE;         /* Mark first time for serial correlation */
     }
 
@@ -187,4 +186,8 @@ void rt_end(rt_ctx * ctx,
     *r_mean = datasum / ctx->totalc;
     *r_montepicalc = montepi;
     *r_scc = scc;
+}
+
+void rt_free(rt_ctx *ctx) {
+  free(ctx);
 }
