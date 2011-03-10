@@ -136,7 +136,8 @@ void rt_end(rt_ctx * ctx,
             double *r_montepicalc, double *r_scc)
 {
     int i;
-    double ent, chisq, datasum, montepi, scc = 0.0;
+    double ent, chisq, datasum, montepi, scc;
+    ent = chisq = datasum = montepi = scc = 0.0;
 
     /* Complete calculation of serial correlation coefficient */
 
