@@ -45,3 +45,4 @@ ref/
 tmp/
 *.bundle
 *.so
+*.gemspec
