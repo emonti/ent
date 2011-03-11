@@ -42,3 +42,6 @@ pkg
 #*.swp
 Gemfile.lock
 ref/
+tmp/
+*.bundle
+*.so
