@@ -1,0 +1,2 @@
+
+require 'ent_native'
