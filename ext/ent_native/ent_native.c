@@ -256,8 +256,8 @@ void Init_ent_native() {
   rb_define_method(c_random_test, "binary?", rb_rt_get_binmode, 0);
 
   rb_define_method(c_random_test, "read", rb_rt_read_string, 1);
-  rb_define_method(c_random_test, "read_string", rb_rt_read_string, 1);
-  rb_define_method(c_random_test, "read_file", rb_rt_read_file, 1);
+//  rb_define_method(c_random_test, "read_string", rb_rt_read_string, 1);
+//  rb_define_method(c_random_test, "read_file", rb_rt_read_file, 1);
   rb_define_method(c_random_test, "finalize", rb_rt_final, 0);
   rb_define_method(c_random_test, "result", rb_rt_result, 0);
   rb_define_method(c_random_test, "entropy", rb_rt_entropy, 0);
